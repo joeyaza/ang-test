@@ -1,4 +1,33 @@
+
 li
 {
     list-style-type: none;
+}
+
+.item {
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+.thumb {
+  padding: 5px;
+}
+
+.title {
+  padding: 0;
+  min-width: 95px;
+}
+
+.search {
+
+  float:top;
+  padding-bottom: 50px;
+}
+
+h1 
+{
+  font-size: 50px;
+}
+
+body {
+  background-color: 
 }

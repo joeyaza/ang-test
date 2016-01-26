@@ -19,20 +19,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 </head>
+
+<body ng-controller="MainController as main">
 <div class="container">
 <h1>ANGULAR APP TEST</h1>
-
-
-<!-- defining angular controller here -->
-<body ng-controller="MainController as main">
-<div class='row'>
-<label>Search Title: <input ng-model="searchText"></label>
-<table id="searchTextResults">
-  <tr ng-repeat="main in main | filter:searchText | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
-    <td class="col-md-3">{{main.title}}</td>
-    <td class="col-md-3"><img ng-src="{{main.thumbnailUrl}}"></td>
-  </tr>
-</table>
 
 <ul class="pagination">
 <li><a href="" ng-click="pagination.prevPage()">&laquo;</a></li>
@@ -41,13 +31,18 @@
   </li>
   <li><a href="" ng-click="pagination.nextPage()">&raquo;</a></li>
 </ul>
-</div>
 
-<!-- 
-  <li ng-repeat="main in main">
-    {{main.title}}<br>
-    <img ng-src="{{main.thumbnailUrl}}">
-  </li> -->
+<!-- defining angular controller here -->
+
+<label class="search">Search Title: <input ng-model="searchText"></label>
+
+<table id="searchTextResults">
+
+  <tr class="item col-sm-3" ng-repeat="main in main | filter:searchText | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage">
+    <td class="title">{{main.title}}</td>
+    <td><img class="thumb" ng-src="{{main.thumbnailUrl}}"></td>
+  </tr>
+</table>
 
 </body>
 </div>
