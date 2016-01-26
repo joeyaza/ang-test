@@ -1,5 +1,5 @@
 angular
-.module("angApp")
+.module("angApp", ['simplePagination'] )
 .controller("MainController", MainController);
 
 MainController.$inject = ['$scope','$http', 'Pagination']

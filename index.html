@@ -10,20 +10,22 @@
 <!-- JAVASCRIPT -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/pagination.js"></script>
 
 <!-- CSS AND STYLE -->
+
 <link rel="stylesheet" type="text/css" href="./css/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 </head>
 
+<!-- define angular controller here for use -->
 <body ng-controller="MainController as main">
 <div class="container">
-<h1>ANGULAR APP TEST</h1>
+<h1 class="top-title">ANGULAR APP TEST</h1>
 
+<!-- page limit and selector -->
 <ul class="pagination">
 <li><a href="" ng-click="pagination.prevPage()">&laquo;</a></li>
   <li ng-repeat="n in [] | range: pagination.numPages" ng-class="{active: n == pagination.page}">
@@ -32,8 +34,7 @@
   <li><a href="" ng-click="pagination.nextPage()">&raquo;</a></li>
 </ul>
 
-<!-- defining angular controller here -->
-
+<!-- searchbar and results -->
 <label class="search">Search Title: <input ng-model="searchText"></label>
 
 <table id="searchTextResults">

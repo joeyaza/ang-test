@@ -4,9 +4,13 @@ li
     list-style-type: none;
 }
 
+.top-title {
+  font-size: 100px;
+  padding-left: 70px;
+}
 .item {
   display: inline-block;
-  border: 1px solid #ccc;
+/*  border: 1px solid #ccc;*/
 }
 .thumb {
   padding: 5px;
@@ -26,8 +30,4 @@ li
 h1 
 {
   font-size: 50px;
-}
-
-body {
-  background-color: 
 }
