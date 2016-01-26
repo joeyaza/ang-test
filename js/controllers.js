@@ -4,7 +4,9 @@ angular
 
 MainController.$inject = ['$scope','$http', 'Pagination']
 
+
 function MainController($scope, $http, Pagination) {
+  $scope.main = [];
   $http.get('http://jsonplaceholder.typicode.com/photos').
       success(function(data) {
           $scope.main = data;
