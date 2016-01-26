@@ -25,14 +25,6 @@
 <div class="container">
 <h1 class="top-title">ANGULAR APP TEST</h1>
 
-<!-- page limit and selector -->
-<ul class="pagination">
-<li><a href="" ng-click="pagination.prevPage()">&laquo;</a></li>
-  <li ng-repeat="n in [] | range: pagination.numPages" ng-class="{active: n == pagination.page}">
-  <a href="" ng-click="pagination.toPageId(n)">{{n + 1}}</a>
-  </li>
-  <li><a href="" ng-click="pagination.nextPage()">&raquo;</a></li>
-</ul>
 
 <!-- searchbar and results -->
 <label class="search">Search Title: <input ng-model="searchText"></label>
@@ -44,6 +36,15 @@
     <td><img class="thumb" ng-src="{{main.thumbnailUrl}}"></td>
   </tr>
 </table>
+
+<!-- page limit and selector -->
+<ul class="pagination">
+<li><a href="" ng-click="pagination.prevPage()">&laquo;</a></li>
+  <li ng-repeat="n in [] | range: pagination.numPages" ng-class="{active: n == pagination.page}">
+  <a href="" ng-click="pagination.toPageId(n)">{{n + 1}}</a>
+  </li>
+  <li><a href="" ng-click="pagination.nextPage()">&raquo;</a></li>
+</ul>
 
 </body>
 </div>

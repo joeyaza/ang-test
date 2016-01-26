@@ -11,6 +11,6 @@ function MainController($scope, $http, Pagination) {
       success(function(data) {
           $scope.main = data;
       });
-  $scope.pagination = Pagination.getNew(100);
+  $scope.pagination = Pagination.getNew(56);
   $scope.pagination.numPages = Math.ceil(5000/$scope.pagination.perPage);
 }
