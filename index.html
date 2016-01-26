@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="angApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANGULAR TEST</title>
+
+<!-- ***************** SCRIPTS **************-->
+
+<!-- JAVASCRIPT -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+
+<!-- CSS AND STYLE -->
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<div class="container">
+<h1>ANGULAR APP TEST</h1>
+
+
+<!-- defining angular controller here -->
+<body ng-controller="MainController as main">
+<div class='row'>
+<label>Search Title: <input ng-model="searchText"></label>
+<table id="searchTextResults">
+  <tr ng-repeat="main in main | filter:searchText">
+    <td class="col-md-3">{{main.title}}</td>
+    <td class="col-md-3"><img ng-src="{{main.thumbnailUrl}}"></td>
+  </tr>
+</table>
+</div>
+
+<!-- 
+  <li ng-repeat="main in main">
+    {{main.title}}<br>
+    <img ng-src="{{main.thumbnailUrl}}">
+  </li> -->
+
+</body>
+</div>
+</html>
